@@ -12,4 +12,9 @@ class Area extends Eloquent {
   {
     return $this->belongsTo('\Goszowski\Ukraine\Region', 'region_id');
   }
+
+  public function setlements()
+  {
+    return $this->hasMany('\Goszowski\Ukraine\Settlement', 'area_id');
+  }
 }
